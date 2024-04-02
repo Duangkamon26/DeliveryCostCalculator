@@ -207,12 +207,12 @@
                 // แสดงผล shippingCost บนหน้าเว็บ
                 var resultContainer = document.getElementById('result');
                 if (resultContainer) {
-                    resultContainer.innerHTML = '<span class="shipping-cost">ค่าใช้จ่ายในการจัดส่งสินค้า: <span id="shippingCostValue">' + shippingCost + '</span> บาท</span><br><span class="distance">ระยะทาง: <span id="distanceValue">' + distanceInKm.toFixed(0) + '</span> กิโลเมตร</span>';
+                    resultContainer.innerHTML = '<span class="shipping-cost">ค่าใช้จ่ายในการจัดส่งสินค้า: <span id="shippingCostValue">' + shippingCost.toFixed(2) + '</span> บาท</span><br><span class="distance">ระยะทาง: <span id="distanceValue">' + distanceInKm.toFixed(2) + '</span> กิโลเมตร</span>';
                 } else {
                     // สร้าง element div ใหม่เพื่อแสดงผล shippingCost หากยังไม่มี
                     resultContainer = document.createElement('div');
                     resultContainer.id = 'result';
-                    resultContainer.innerHTML = '<span class="shipping-cost">ค่าใช้จ่ายในการจัดส่งสินค้า: <span id="shippingCostValue">' + shippingCost + '</span> บาท</span><br><span class="distance">ระยะทาง: <span id="distanceValue">' + distanceInKm.toFixed(1) + '</span> กิโลเมตร</span>';
+                    resultContainer.innerHTML = '<span class="shipping-cost">ค่าใช้จ่ายในการจัดส่งสินค้า: <span id="shippingCostValue">' + shippingCost.toFixed(2) + '</span> บาท</span><br><span class="distance">ระยะทาง: <span id="distanceValue">' + distanceInKm.toFixed(2) + '</span> กิโลเมตร</span>';
                     document.body.appendChild(resultContainer);
                 }
             });
